@@ -1,3 +1,6 @@
+Moved to GitHub May 1, 2008
+Was hosted at http://code.google.com/p/audit-mass-assignment/
+
 = audit_mass_assignment plugin for Ruby on Rails
 
 The audit_mass_assignment Ruby on Rails plugin contains a rake task that
@@ -9,9 +12,9 @@ If a Rails model does not use attr_accessible, it fails this audit.  The
 audit does not check which parameters are accessible or protected, only
 that at least one is marked as accessible.
 
-Run the audit whenever you feel like it.  Other audit plugins for Rails
+Run the audit whenever you feel like it!  Other audit plugins for Rails
 could be created to automatically check for bad patterns or insecure
-code.  This one was relatively easy to implement.
+code.  This one was easy to implement.
 
 == Installation
 
