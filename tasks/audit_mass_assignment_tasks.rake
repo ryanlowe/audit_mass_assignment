@@ -7,7 +7,7 @@ namespace :audit do
     subclasses.delete CGI::Session::ActiveRecordStore::Session
     failures = []
     for subclass in subclasses
-      fail = (subclass.attr_accessible == [])
+      fail = (subclass.attr_accessible.size == 0)
       status = fail ? "F" : "."
       failures << subclass if fail
       putc status
