@@ -1,4 +1,9 @@
 
+== 0.1.0
+
+May 25
+= add GitHub gemspec file
+
 May 14
 - bugfix for 2.x: attr_accessible is now a Set instead of an Array
 - add CHANGELOG
