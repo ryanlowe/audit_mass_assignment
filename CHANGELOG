@@ -2,6 +2,7 @@
 == 0.1.0
 
 May 26
+= add AuditComment model for testing
 = add AuditPost model for testing
 = move audit code to a class
 

@@ -6,4 +6,12 @@ class AuditPostTest < ActiveSupport::TestCase
   def test_fixtures
     assert audit_posts(:hello).valid?
   end
+  
+  def test_attr_accessible
+    set = Set.new
+    set << "title"
+    set << "body"
+    assert_equal set, AuditPost.attr_accessible
+  end
+  
 end
