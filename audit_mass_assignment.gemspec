@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.authors = ["Ryan Lowe"]
   s.files = ["README", "CHANGELOG", "MIT-LICENSE", "audit_mass_assignment.gemspec",
-    "lib/audit_mass_assignment.rb"
+    "lib/audit_mass_assignment.rb",
     "tasks/audit_mass_assignment_tasks.rake"]
   s.test_files = []
   s.rdoc_options = ["--main", "README"]
