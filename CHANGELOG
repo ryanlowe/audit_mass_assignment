@@ -1,5 +1,5 @@
 
-== 0.1.0
+== 0.1.1
 
 May 26
 = add AuditComment model for testing
@@ -8,6 +8,8 @@ May 26
 
 May 25
 = add GitHub gemspec file
+
+== 0.1.0
 
 May 14
 - bugfix for 2.x: attr_accessible is now a Set instead of an Array
