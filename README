@@ -3,37 +3,20 @@ Was hosted at http://code.google.com/p/audit-mass-assignment/
 
 = audit_mass_assignment plugin for Ruby on Rails
 
-The audit_mass_assignment Ruby on Rails plugin contains a rake task that
-checks the models in your project for the attr_accessible whitelist approach
-for protecting against "mass assignment" exploits.  It does not check for
-use of attr_protected!
-
-If a Rails model does not use attr_accessible, it fails this audit.  The
-audit does not check which parameters are accessible or protected, only
-that at least one is marked as accessible.
-
-Run the audit whenever you feel like it!  Other audit plugins for Rails
-could be created to automatically check for bad patterns or insecure
-code.  This one was easy to implement.
+  The audit_mass_assignment Ruby on Rails plugin contains a rake task that
+  checks the models in your project for the attr_accessible whitelist approach
+  for protecting against "mass assignment" exploits.  It does not check for
+  use of attr_protected.
 
 == Installation
 
-It looks like Rails 2.1 will support "script/plugin install" with Git
-repositories.  Until then you can put this plugin in vendor/plugins with:
-
-git clone git://github.com/ryanlowe/audit_mass_assignment.git
-
-and delete the .git directory inside it before committing it to source control.
-
-When Rails 2.1 supports Git you should be able to do:
-
-script/plugin install git://github.com/ryanlowe/audit_mass_assignment.git
+  gem install ryanlowe-audit_mass_assignment --source http://gems.github.com/
 
 == Usage
 
   $ rake audit:mass_assignment
 
-== NOTES
+== Notes
 
   If you want to protect ALL attributes in your model use:
   
