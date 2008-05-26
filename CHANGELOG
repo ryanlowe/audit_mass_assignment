@@ -1,6 +1,9 @@
 
 == 0.1.0
 
+May 26
+= move audit code to a class
+
 May 25
 = add GitHub gemspec file
 

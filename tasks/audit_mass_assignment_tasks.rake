@@ -3,15 +3,8 @@ namespace :audit do
   task :mass_assignment => :environment do
     puts "Audit mass assignment in models:"
     Dir.glob(RAILS_ROOT + '/app/models/**/*.rb').each { |file| require file }
-    subclasses = Object.subclasses_of(ActiveRecord::Base)
-    subclasses.delete CGI::Session::ActiveRecordStore::Session
-    failures = []
-    for subclass in subclasses
-      fail = (subclass.attr_accessible.size == 0)
-      status = fail ? "F" : "."
-      failures << subclass if fail
-      putc status
-    end
+    results, total, failures = AuditMassAssignment.audit_all
+    putc results
     putc "\n"
     putc "\n"
     if failures.size > 0
@@ -24,6 +17,6 @@ namespace :audit do
       puts "  Solution: use attr_accessible in these models"
       putc "\n"
     end
-    puts subclasses.size.to_s+" models, "+failures.size.to_s+" failures"
+    puts total.to_s+" models, "+failures.to_s+" failures"
   end
 end
