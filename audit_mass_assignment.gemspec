@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "audit_mass_assignment"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
   s.date = "2008-05-25"
   s.summary = "Checks Ruby on Rails models for use of the attr_accessible white list"
   s.email = "rails@ryanlowe.ca"
