@@ -8,6 +8,7 @@ class AuditCommentTest < ActiveSupport::TestCase
   end
   
   def test_attr_accessible
+    # no attr_accessible
     set = Set.new
     assert_equal set, AuditComment.attr_accessible
   end

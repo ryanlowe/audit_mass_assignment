@@ -13,8 +13,8 @@ class SaveOrRaiseTest < Test::Unit::TestCase
   
   def test_audit_all
     result, total, failures = AuditMassAssignment.audit_all
-    assert_equal ".F", result
-    assert_equal 2, total
+    assert_equal "..F", result
+    assert_equal 3, total
     assert_equal 1, failures
   end
   

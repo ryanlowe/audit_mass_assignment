@@ -8,6 +8,7 @@ class AuditPostTest < ActiveSupport::TestCase
   end
   
   def test_attr_accessible
+    # attr_accessible :title, :body
     set = Set.new
     set << "title"
     set << "body"
