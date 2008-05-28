@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name = "audit_mass_assignment"
-  s.version = "0.1.3"
-  s.date = "2008-05-26"
+  s.version = "0.1.4"
+  s.date = "2008-05-28"
   s.summary = "Checks Ruby on Rails models for use of the attr_accessible white list"
   s.email = "rails@ryanlowe.ca"
   s.homepage = "http://github.com/ryanlowe/audit_mass_assignment"
@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.authors = ["Ryan Lowe"]
   s.files = ["README", "CHANGELOG", "MIT-LICENSE", "audit_mass_assignment.gemspec",
+    "init.rb",
     "lib/audit_mass_assignment.rb",
     "tasks/audit_mass_assignment_tasks.rake"]
   s.test_files = []
