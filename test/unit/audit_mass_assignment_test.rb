@@ -9,13 +9,14 @@ class SaveOrRaiseTest < Test::Unit::TestCase
   def test_audit
     assert  AuditMassAssignment.audit(AuditPost)
     assert !AuditMassAssignment.audit(AuditComment)
+    assert  AuditMassAssignment.audit(AuditUser)
   end
   
   def test_audit_all
-    result, total, failures = AuditMassAssignment.audit_all
+    class_count, result, failures = AuditMassAssignment.audit_all
+    assert_equal 3, class_count
     assert_equal "..F", result
-    assert_equal 3, total
-    assert_equal 1, failures
+    assert_equal [ AuditComment ], failures
   end
   
 end

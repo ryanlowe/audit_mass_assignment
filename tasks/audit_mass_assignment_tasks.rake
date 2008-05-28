@@ -3,7 +3,7 @@ namespace :audit do
   task :mass_assignment => :environment do
     puts "Audit mass assignment in models:"
     Dir.glob(RAILS_ROOT + '/app/models/**/*.rb').each { |file| require file }
-    results, total, failures = AuditMassAssignment.audit_all
+    class_count, results, failures = AuditMassAssignment.audit_all
     putc results
     putc "\n"
     putc "\n"
@@ -17,6 +17,6 @@ namespace :audit do
       puts "  Solution: use attr_accessible in these models"
       putc "\n"
     end
-    puts total.to_s+" models, "+failures.to_s+" failures"
+    puts class_count.to_s+" models, "+failures.size.to_s+" failures"
   end
 end

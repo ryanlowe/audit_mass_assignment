@@ -16,7 +16,7 @@ class AuditMassAssignment
       status = pass ? "." : "F"
       results += status
     end
-    [ results, subclasses.size, failures.size ]
+    [ subclasses.size, results, failures ]
   end
   
 end
